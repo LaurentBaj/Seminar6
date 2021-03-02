@@ -1,33 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Thesis {
 
     // Members
-    private Supervisor[] supervisors;
-    private Student[] students;
-    private Meeting[] meetings;
+    private List<Person> supervisors = new ArrayList<>();
+    private List<Person> students = new ArrayList<>();
+    private List<Meeting> meetings = new ArrayList<>();
 
-    // Ctor
-    public Thesis() {
-        this.supervisors = new Supervisor[3];
-        this.students = new Student[2];
-        this.meetings = new Meeting[10];
-    }
 
     // Getters
-    public Supervisor[] getSupervisors() {
+    public List<Person> getSupervisors() {
         return supervisors;
     }
 
-    public Student[] getStudents() {
+    public List<Person> getStudents() {
         return students;
     }
 
-    public Meeting[] getMeetings() {
+    public List<Meeting> getMeetings() {
         return meetings;
     }
 
-    // Methods
-    public void addSupervisor() {
 
+    // Methods
+    public void addSupervisor(Person person) {
+        if (person.getRole() == Role.supervisor && supervisors.size() < 4)
+            this.supervisors.add(person);
     }
 
 

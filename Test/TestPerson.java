@@ -6,7 +6,7 @@ public class TestPerson {
 
     @Test
     public void affirmPersonStudent() {
-        Person a = new Student("Laurent", "Bajrami", 25, Role.student);
+        Person a = new Person("Laurent", "Bajrami", 25, Role.student);
 
         assertTrue(a.getName().equals("Laurent"));
         assertTrue(a.getSurname().equals("Bajrami"));
@@ -16,7 +16,7 @@ public class TestPerson {
 
     @Test
     public void affirmPersonSupervisor() {
-        Person a = new Supervisor("Laurent", "Bajrami", 25, Role.supervisor);
+        Person a = new Person("Laurent", "Bajrami", 25, Role.supervisor);
 
         assertTrue(a.getName().equals("Laurent"));
         assertTrue(a.getSurname().equals("Bajrami"));
