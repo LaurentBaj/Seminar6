@@ -21,12 +21,22 @@ public class Thesis {
     public List<Meeting> getMeetings() {
         return meetings;
     }
-
+    
 
     // Methods
     public void addSupervisor(Person person) {
-        if (person.getRole() == Role.supervisor && supervisors.size() < 4)
+        if (person.getRole() == Role.supervisor && supervisors.size() < 3)
             this.supervisors.add(person);
+    }
+    
+    public void addStudent(Person person) {
+        if (person.getRole() == Role.student && students.size() < 2)
+            this.students.add(person);
+    }
+
+    public void addMeeting(Meeting meeting) {
+        if (meetings.size() < 10)
+            this.meetings.add(meeting);
     }
 
 

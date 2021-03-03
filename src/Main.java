@@ -2,13 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
         Thesis a = new Thesis();
+        Person p1 = new Person("", "", 2, Role.student);
+        a.addStudent(p1);
 
-        Person b = new Person("Laurent", "N", 25, Role.student);
-
-        a.addSupervisor(b);
-        System.out.println(a.getSupervisors().size());
-
-
+        System.out.println(a.getStudents().contains(p1));
     }
 
 }
