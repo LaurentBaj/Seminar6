@@ -1,3 +1,5 @@
-public class Meeting {
 
+
+public class Meeting {
+    private String meeting;
 }

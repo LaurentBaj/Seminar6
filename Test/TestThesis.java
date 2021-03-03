@@ -15,7 +15,7 @@ public class TestThesis {
 
         a.addSupervisor(p1);
         a.addSupervisor(p2);
-        a.addSupervisor(p3);
+        a.addSupervisor(p3); // Try to force wrong type
 
         assertTrue(a.getSupervisors().size() == 2);
 
@@ -32,7 +32,7 @@ public class TestThesis {
 
         a.addStudent(p5);
         a.addStudent(p6);
-        a.addStudent(p7);
+        a.addStudent(p7); // Try to force wrong type
 
         assertTrue(a.getStudents().size() == 2);
     }
@@ -40,7 +40,7 @@ public class TestThesis {
     @Test
     public void testAddMeeting() {
         for (int i = 0; i < 10; i++) a.addMeeting(new Meeting());
-        a.addMeeting(new Meeting()); // Adding an eleventh element
+        a.addMeeting(new Meeting()); // Try to add too many meeting
         assertTrue(a.getMeetings().size() == 10);
     }
 

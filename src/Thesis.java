@@ -8,7 +8,6 @@ public class Thesis {
     private List<Person> students = new ArrayList<>();
     private List<Meeting> meetings = new ArrayList<>();
 
-
     // Getters
     public List<Person> getSupervisors() {
         return supervisors;
