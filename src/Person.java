@@ -1,16 +1,15 @@
 public class Person {
-
-    private String name;
-    private String surname;
+    // Members
+    private String name, surname;
     private int age;
     private Role role;
 
-   public Person(String name, String surname, int age, Role role) {
+    public Person(String name, String surname, int age, Role role) {
        this.name = name;
        this.surname = surname;
        this.age = age;
        this.role = role;
-   }
+    }
 
     public String getName() {
         return name;

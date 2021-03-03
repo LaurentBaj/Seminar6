@@ -37,11 +37,6 @@ public class TestThesis {
         assertTrue(a.getStudents().size() == 2);
     }
 
-    @Test
-    public void testAddMeeting() {
-        for (int i = 0; i < 10; i++) a.addMeeting(new Meeting());
-        a.addMeeting(new Meeting()); // Try to add too many meeting
-        assertTrue(a.getMeetings().size() == 10);
-    }
+    
 
 }

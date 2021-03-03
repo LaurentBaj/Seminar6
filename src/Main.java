@@ -1,11 +1,21 @@
 public class Main {
 
     public static void main(String[] args) {
-        Thesis a = new Thesis();
-        Person p1 = new Person("", "", 2, Role.student);
-        a.addStudent(p1);
+        Meeting m = new Meeting();
+        String a1, a2, a3, a4;
 
-        System.out.println(a.getStudents().contains(p1));
+        a1 = "02.01.1996";
+        a2 = "07.05.1996";
+        a3 = "03.01.1996";
+        a4 = "02.01.1996";
+
+        m.addMeeting(a1);
+        m.addMeeting(a2);
+        m.addMeeting(a3);
+
+        for (String s : m.getMeeting()) {
+            System.out.println(s);
+        }
     }
 
 }

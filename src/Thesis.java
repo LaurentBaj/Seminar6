@@ -12,11 +12,9 @@ public class Thesis {
     public List<Person> getSupervisors() {
         return supervisors;
     }
-
     public List<Person> getStudents() {
         return students;
     }
-
     public List<Meeting> getMeetings() {
         return meetings;
     }
@@ -32,11 +30,5 @@ public class Thesis {
         if (person.getRole() == Role.student && students.size() < 2)
             this.students.add(person);
     }
-
-    public void addMeeting(Meeting meeting) {
-        if (meetings.size() < 10)
-            this.meetings.add(meeting);
-    }
-
 
 }
