@@ -1,4 +1,5 @@
 public class Person {
+
     // Members
     private String name, surname;
     private int age;
@@ -11,18 +12,16 @@ public class Person {
        this.role = role;
     }
 
+    // For testing purposes
     public String getName() {
         return name;
     }
-
     public String getSurname() {
         return surname;
     }
-
     public int getAge() {
         return age;
     }
-
     public Role getRole() {
         return role;
     }
