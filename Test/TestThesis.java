@@ -6,6 +6,16 @@ public class TestThesis {
 
     Thesis thesis = new Thesis();
 
+    // Test constructor
+    @Test
+    public void testConstructor() {
+        assertTrue(thesis.getMeetings().size() == 0);
+        assertTrue(thesis.getSupervisors().size() == 0);
+        assertTrue(thesis.getStudents().size() == 0);
+    }
+
+
+    // Check for correct values, quantity and false types
     @Test
     public void testAddSupervisor() {
         Person p1 = new Person("A", "B", 33, Role.supervisor);
@@ -13,7 +23,6 @@ public class TestThesis {
         Person p3 = new Person("C", "B", 27, Role.student); // Imposter
         Person p4 = new Person("D", "B", 30, Role.supervisor);
 
-        // Test constructor
         thesis.addSupervisor(p1);
         Person person1 = thesis.getSupervisors().get(0);
         assertTrue(person1.getName() == "A" && person1.getSurname() == "B" &&
